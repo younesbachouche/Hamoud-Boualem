@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Hamoud Boualem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="images/hamoudlogo.png" type="image/x-icon">
+</head>
+
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="images/logo.png" alt="#" class="logo"></a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Produits</a></li>
+                <li><a href="#">Présentation</a></li>
+                <li><a href="#">Médias</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>
+                    Hamoud Boualem
+                       
+                </h2>
+                <p>
+                    <b>Hamoud Boualem</b>, Voit Le Jour en 1878.
+                    <br>
+                    
+                La plus ancienne entreprise algérienne en activité, voit le jour en 1878 elle est spécialisée dans la production de boissons non alcoolisées .
+                
+            </p>
+            <p>De nos jours, Hamoud Boualem est également exportée et distribuée dans différents pays d’Europe et au Canada.</p>
+            
+                <a href="#">Khiyar Tgerdjima Dyalek !</a>
+            </div>
+            <div class="imgBox">
+                <img src="images/tchina.png" class="selecto">
+            </div>    
+        </div>
+        <ul class="thumb">
+            <li><img src="images/selecto.png" onclick="imgSlider('images/selecto.png');changeBgColor('#0057A9') ">
+            </li>
+            <li><img src="images/bida.png" onclick="imgSlider('images/bida.png');changeBgColor('#FFC211') ">
+            </li>
+            <li><img src="images/tchina.png" onclick="imgSlider('images/tchina.png');changeBgColor('#D85000') ">
+            </li>
+            <li><img src="images/9ares.png" onclick="imgSlider('images/9ares.png');changeBgColor('#6DBB00') ">
+            </li>
+            <li><img src="images/annana.png" onclick="imgSlider('images/annana.png');changeBgColor('#EBB410') ">
+            </li>
+
+        </ul>
+        
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

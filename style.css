@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #D85000;
+    transition: 0.5s;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding : 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    max-width: 80px;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    color: white;
+    display: inline-block;
+    margin-left: 30px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .textBox{
+    position: relative;
+    max-width: 600px;
+}
+.content .textBox h2{
+    color: white;
+    font-size: 4em;
+    line-height: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.content .textBox h2 span {
+    font-size: 2em;
+}
+.content .textBox p {
+    font-size: 1.2em;
+    color: white;
+}
+.content .textBox a{ 
+    display: inline-block;
+    background: white;
+    padding: 8px 20px ;
+    margin-top: 20px;
+    color: black;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.25s;
+}
+.content .textBox a:hover{
+    letter-spacing: 2px;
+}
+.content .imgBox{
+    width: 600px;
+    display: flex;
+    padding-right: 100px;
+    margin-top: 50px;
+    justify-content: flex-end;
+}
+.content .imgBox img{
+    max-width: 230px;
+}
+.thumb{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+
+}
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.thumb li img {
+    max-width: 40px;
+    transition: 0.5s;
+}
+.thumb li img:hover {
+    transform: translateY(-15px);
+}
+.social{
+   position: absolute;
+   top: 50%;
+   right: 30px;
+   transform: translateY(-50%);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.social li{
+    list-style: none;
+}
+.social li a{
+    display: inline-block;
+    filter: invert(1);
+    margin: 5px 0;
+    transform: scale(0.6);
+    transition: 0.5s;
+}
+.social li a:hover{
+    transform: translateX(-10px) scale(0.6);
+}
+
+@media (max-width: 991px)
+{
+    section{
+        padding: 40px;
+        padding-bottom: 120px;
+    }
+    header{
+        padding: 20px 40px;
+    }
+    header .logo {
+        position: relative;
+        max-width: 60px;
+    }
+    header ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    header ul.active{
+        visibility: visible;
+        opacity: 1;
+    }
+    header ul li a{
+        display: inline-block;
+        color: black;
+        font-weight: 400;
+        margin-left: 0;
+        text-decoration: none;
+        font-size: 2em;
+        margin :10px 0;
+    }
+    header ul li a:hover{
+        color:rgba(231, 2, 2, 0.932);
+    }
+    .toggleMenu{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(images/menu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        z-index: 2;
+        cursor: pointer;
+    }
+    .toggleMenu.active{
+        background: url(images/close.png);
+        filter: invert(1);
+        background-position: center;
+        background-size: 25px;
+        background-repeat: no-repeat;
+    }
+    .content {
+        flex-direction: column; 
+        margin-top: 80px;
+    }
+    .content .textBox{
+        position: relative;
+        max-width: 100%;
+    }
+    .content .textBox h2{
+        
+        font-size: 3em;
+    }
+    .content .textBox a{
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    .content .imgBox {
+        width: 100%;
+        display: flex;
+        padding-right: 0;
+        margin-top: 50px;
+        justify-content: center;
+    }
+    .content .imgBox img{
+        max-width: 150px;
+    }
+    .thumb li img {
+        max-width: 30px;
+    }
+    .social {
+        position: absolute;
+        right: 0;
+        width: 50px;
+        background-color: rgba(0,0, 0,0.1);
+        border-radius: 5px;
+    }
+}
